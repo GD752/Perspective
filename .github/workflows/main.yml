@@ -3,7 +3,7 @@ name: Perspective Deploy
 on:
   push:
     branches:
-    -master
+    - master
 
 jobs:
   firebase-deploy:
@@ -19,7 +19,9 @@ jobs:
       - uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
-          
+        env:
+          FIREBASE_TOKEN: 1//0g-A6Q2-htgFqCgYIARAAGBASNwF-L9IraPGEdSFejtcF9tA9V4clSKPZW1ytbKISRKpuRSDSMEcK9Yi6-OVVdSxytxVDWVIwHfQ
+
 
 
 
