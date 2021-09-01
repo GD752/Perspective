@@ -26,13 +26,12 @@ import { CommentsComponent } from './comments/comments.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 let config = {
-  apiKey: "AIzaSyBFzJAZsAlQUwoxOSSnPWOI01GLWNbnuck",
-  authDomain: "perspective-33566.firebaseapp.com",
-  projectId: "perspective-33566",
-  storageBucket: "perspective-33566.appspot.com",
-  messagingSenderId: "429403148689",
-  appId: "1:429403148689:web:94b767a36fe8151e9aca30",
-  measurementId: "G-8Z0ZLVH59P"
+    apiKey: "AIzaSyCg_QKJDhuZTTFKJTR5tbTZ2zqPQj2yrAE",
+    authDomain: "perspective-65f6f.firebaseapp.com",
+    projectId: "perspective-65f6f",
+    storageBucket: "perspective-65f6f.appspot.com",
+    messagingSenderId: "122248123834",
+    appId: "1:122248123834:web:6a9eb789ba0e562deab983"
 };
 firebase.initializeApp(config);
 
