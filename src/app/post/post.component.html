@@ -6,13 +6,17 @@
 
     <div class="card-text">
       <span [innerHTML] ="postData.content.substring(0, 50)"></span>... <a class="card-link" routerLink="/view/{{ post.id }}">Read More</a>
+      <br> Tags: 
+      <span class = "d-inline" *ngFor="let tag of postData.tags | slice:0:10">
+        #{{ tag }} 
+        <!--<a [routerLink]="['/myblogs']" [queryParams]="{ tag: tag }">#{{ tag }} </a>-->
+      </span>
     </div>
 
   </div>
 
   <div class="card-footer text-muted">
     Posted on {{ postData.created.toDate() | date: 'MMM dd, yyyy' }}
-
     <button type="button" class="btn btn-danger card-link btn-sm float-right" *ngIf="user && user.uid == postData.owner" (click)="delete()">Delete</button>
 
   </div>
