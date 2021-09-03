@@ -3,7 +3,7 @@
     <h1>{{ post.title }}</h1>
     <div [innerHTML]="post.content"></div>
     <div *ngFor="let tag of post.tags">
-      <a [routerLink]="['/myblogs']" [queryParams]="{ tag: '{{ tag }}'}">{{ tag }}</a>
+      <a [routerLink]="['/myblogs']" [queryParams]="{ tag: {{ tag.substring(1) }} }">{{ tag }}</a>
     </div>
   </div>
 </div>
