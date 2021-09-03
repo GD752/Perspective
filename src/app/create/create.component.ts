@@ -13,6 +13,7 @@ export class CreateComponent implements OnInit {
   // editorConfig: any;
   title: string;
   // content: string; changed for ngx-editor 5
+  tags: string;
   content: any;
   @Output('postCreated') postCreated = new EventEmitter();
 
@@ -40,6 +41,7 @@ export class CreateComponent implements OnInit {
       .add({
         title: this.title,
         content: this.content,
+        tags: this.tags.trim().split(" "),
         owner: firebase.auth().currentUser.uid,
         created: firebase.firestore.FieldValue.serverTimestamp(),
       })
